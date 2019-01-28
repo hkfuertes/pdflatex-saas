@@ -1,8 +1,7 @@
 FROM       ubuntu:16.04
-MAINTAINER Átila Camurça <camurca.home@gmail.com>, Samir Coutinho <samirfor@gmail.com>
+MAINTAINER Miguel Fuertes
 
 ENV DEBIAN_FRONTEND "noninteractive"
-ARG INSTALL_EXTRA_PACKAGES
 
 WORKDIR /opt/pdflatex
 
@@ -18,7 +17,8 @@ RUN set -xe && \
         ca-certificates \
         texlive-latex-base \
         texlive-latex-extra \
-        ${INSTALL_EXTRA_PACKAGES} \
+        texlive-music \
+        texlive-lang-spanish \
     && \
 
     # install nodejs v6
@@ -27,7 +27,7 @@ RUN set -xe && \
         nodejs \
         # Optional: install build tools
         # To compile and install native addons from npm you may also need to install build tools:
-        # build-essential \
+        build-essential \
     && \
 
     # update npm packages
