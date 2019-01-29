@@ -1,3 +1,5 @@
 build:
   docker:
     web: Dockerfile
+run:
+  web: forever /opt/pdflatex/index.js

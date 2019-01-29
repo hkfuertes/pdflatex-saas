@@ -6,7 +6,7 @@ Remade using express.js
 
 ```javascript
 {
-    'Welcome':'Hello! to the PDFLaTeX Service, only 2 routes are available, "/url?url=" and "/binary"',
+    'Welcome':'Hello! to the PDFLaTeX Service, only 2 routes are available.',
     'Routes':{
       '/url?url=':{
         'Info':'GET route, send the url to the latex file, it must be public.',

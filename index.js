@@ -36,7 +36,7 @@ function getReceivedStream(req,res, recfilepath){
 app.get('/', function (req, res){
   var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
   retVal = {
-    'Welcome':'Hello! to the PDFLaTeX Service, only 2 routes are available, "/url?url=" and "/binary"',
+    'Welcome':'Hello! to the PDFLaTeX Service, only 2 routes are available.',
     'Routes':{
       '/url?url=':{
         'Info':'GET route, send the url to the latex file, it must be public.',
@@ -67,5 +67,5 @@ app.post('/binary', function(req,res){
     });
 })
 
-const port = 5050
-app.listen(port)
+var server_port = process.env.YOUR_PORT || process.env.PORT || 5050;
+app.listen(server_port)
