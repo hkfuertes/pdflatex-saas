@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND "noninteractive"
 
 WORKDIR /opt/pdflatex
 
-COPY index.js .
+COPY app.js .
 COPY package.json .
 
 RUN set -xe && \
@@ -41,4 +41,4 @@ RUN set -xe && \
 
 EXPOSE 5050
 
-CMD ["forever", "/opt/pdflatex/index.js"]
+CMD ["forever", "/opt/pdflatex/app.js"]

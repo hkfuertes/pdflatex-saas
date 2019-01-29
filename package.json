@@ -1,15 +1,18 @@
 {
-  "name": "pdflatex-as-a-service",
+  "name": "pdflatex-as-a-service-music-edition",
   "version": "0.0.1",
-  "description": "pdflatex-as-a-service =====================",
-  "main": "index.js",
+  "description": "pdflatex-as-a-service-music-edition",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node app.js"
   },
-  "author": "",
+  "author": "Miguel Fuertes",
   "license": "BSD",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "request": "^2.88.0",
     "tmp": "0.0.20"
   }
 }
